@@ -75,8 +75,9 @@
     {
       "@id": "https://repolex.ai/r/colin-kiegel/rust-derive-builder/commit/1b3017d2e637b2f00540e095d9fd0ad7289a0287",
       "git:hexsha": "1b3017d2e637b2f00540e095d9fd0ad7289a0287",
-      "repolex:parseStatus": "pending",
-      "git:tagName": "v0.13.0"
+      "repolex:parseStatus": "parsed",
+      "git:tagName": "v0.13.0",
+      "repolex:parsedAt": "2026-05-09T00:12:43.747930+00:00"
     },
     {
       "@id": "https://repolex.ai/r/colin-kiegel/rust-derive-builder/commit/213dd7de5c8154161e199be5e3e76488ed95b156",
