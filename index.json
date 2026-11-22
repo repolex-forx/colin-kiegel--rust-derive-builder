@@ -1,5 +1,26 @@
 {
   "org": "colin-kiegel",
   "repo": "rust-derive-builder",
-  "versions": []
+  "versions": [
+    {
+      "commit": "fc18dd236a6dc6b5b49970efdb1b78f40bb3b998",
+      "tag": "v0.20.2",
+      "parsed_at": "2026-11-22T01:25:42.703284+00:00"
+    },
+    {
+      "commit": "5705f00f23e3bd77c453a1c0bbd3de34b572b049",
+      "tag": "v0.12.0",
+      "parsed_at": "2026-05-09T05:36:01.175123+00:00"
+    },
+    {
+      "commit": "1b3017d2e637b2f00540e095d9fd0ad7289a0287",
+      "tag": "v0.13.0",
+      "parsed_at": "2026-05-09T00:12:43.747788+00:00"
+    },
+    {
+      "commit": "213dd7de5c8154161e199be5e3e76488ed95b156",
+      "tag": "v0.13.1",
+      "parsed_at": "2026-05-08T18:24:49.791176+00:00"
+    }
+  ]
 }

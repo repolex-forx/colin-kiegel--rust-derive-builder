@@ -6,29 +6,27 @@ RDF knowledge graph data for [colin-kiegel/rust-derive-builder](https://github.c
 
 ## How to use this data
 
-The easiest way to get started is to install the [lexq](https://github.com/repolex-ai/lexq) query tool using [uv](https://docs.astral.sh/uv/getting-started/installation/).
-
-If you have uv installed, just copy/paste this into your terminal:
+The easiest way to get started is to install the [rlex](https://github.com/repolex-ai/rlex) query tool:
 
 ```bash
-uv tool install git+https://github.com/repolex-ai/lexq
+cargo install --git https://github.com/repolex-ai/rlex
 ```
 
-This installs lexq onto your system, in your user context. Verify the install:
+Verify the install:
 
 ```bash
-lexq --help
+rlex --help
 ```
 
-**lexq is designed to be used primarily by LLMs in a terminal.** Start up your favorite LLM and ask it to use the lexq tool. It's that easy!
+**rlex is designed to be used primarily by LLMs in a terminal.** Start up your favorite AI assistant and ask it to use rlex. It handles the SPARQL — you just ask questions in plain English.
 
 To load this repo's data:
 
 ```bash
-lexq download colin-kiegel/rust-derive-builder
+rlex download colin-kiegel/rust-derive-builder
 ```
 
-This will automatically download essential data files from the last parsed commit. Consult `lexq --moreinfo` for other options, including downloading multiple commits, blobs, etc.
+Consult `rlex --help` for other options, including SPARQL queries, HTTP server, and interactive visualization.
 
 ## Data structure
 
@@ -46,7 +44,9 @@ All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) 
 │   │   ├── 5705f00f23e3bd77c453a1c0bbd3de34b572b049.nq.gz
 │   │   └── fc18dd236a6dc6b5b49970efdb1b78f40bb3b998.nq.gz
 │   └── repolex
-│       └── 5705f00f23e3bd77c453a1c0bbd3de34b572b049
+│       ├── 5705f00f23e3bd77c453a1c0bbd3de34b572b049
+│       │   └── chunk-001.nq.gz
+│       └── fc18dd236a6dc6b5b49970efdb1b78f40bb3b998
 │           └── chunk-001.nq.gz
 └── blob
     ├── 0781330f9b33d1e93a00d47a54cd6e24ef131a57.nq.gz
@@ -242,10 +242,9 @@ All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) 
     ├── fa5c0d0d6a9da44dae356b39bf06e310b9953ec9.nq.gz
     ├── fa8cf032307323e07ecf2767ebc26365651f6d63.nq.gz
     ├── fa936cae888515c1dc8773fb1a5c0af2c046b00c.nq.gz
-    ├── fd55a5961e07cdb490d9d1cf13cbd6cfa5866ccb.nq.gz
-    └── ff2f8affb3865af059016ccf731e4f5d5ba52971.nq.gz
+    └── fd55a5961e07cdb490d9d1cf13cbd6cfa5866ccb.nq.gz
 
-9 directories, 200 files
+10 directories, 200 files
 ```
 
 | Directory | What it contains |
@@ -259,10 +258,11 @@ All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) 
 | `branch/` | Branch metadata. |
 | `tag/` | Tag metadata. |
 | `filetree/` | File tree snapshots per commit (which files existed and their blob SHAs). |
+| `audit/` | Code architecture and graph audit reports per commit. |
 
 ## Source repository
 
 [colin-kiegel/rust-derive-builder](https://github.com/colin-kiegel/rust-derive-builder)
 
 ---
-*Parsed on 2026-05-10 by [repolex](https://repolex.ai)*
+*Parsed on 2026-11-22 by [repolex](https://repolex.ai)*
